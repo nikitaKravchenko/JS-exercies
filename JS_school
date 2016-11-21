@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>Event handling</title>
+</head>
+<body>
+<div id="main">
+ <nav id ="navbar">
+ <ul>
+   <li>Students
+    <ul>
+     <li id="Academics">Academics</li>
+     <li id="Athletics">Athletics</li>
+     <li id="Extracurriculars">Extracurriculars</li>
+
+    </ul> 
+    </li>
+  <ul>
+ </nav>
+
+<div id="form-container">
+  <h2>Contact form</h2>
+  <p>Thank you  for your interest in the School of JavaScript. Please fill out the form below so we can send you even more materials!</p>
+
+<form id = "main-form">
+  <ul>
+    <li><label for="firstName">First Name: </label><input id = "firstName" type="text"/></li>
+    <li><label for="lastName">Last Name: </label><input id = "lastName" type="text"/></li>
+    <li><label for="city">City: </label><input id = "city" type="text"/></li>
+    <li><input type="submit"/><input type ="reset"/></li>
+  </ul>
+</form>
+</div>
+</body>
+	<script>
+		//take element firstName		
+		var firstName = document.getElementById('firstName');
+  		// Присоединить к нему обработчик событий
+		firstName.onclick = function(e){ 
+		console.log('You clicked in ' +e.target.id+' field!');
+			e.target.style.background = 'yellow';
+		};
+			
+	</script>
+</html>
